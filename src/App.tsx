@@ -1,25 +1,41 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import TextField from "./TextField";
-
+import Greet from "./components/Greet";
+import Person from "./components/Person";
+import PersonList from "./components/PersonList";
+import Status from "./components/Status";
+import Heading from "./components/Heading";
+import Oscar from "./components/Oscar";
 function App() {
-  const addNumber = (a: number) => {
-    return a * a;
+  const personInfo = {
+    first: "Muhammad",
+    last: "Arsan",
   };
-  const handleChange = (e: any) => {
-    console.log("fdsfd");
-  };
+  const namesList = [
+    {
+      first: "babar",
+      last: "Azam",
+    },
+    {
+      first: "fakhar",
+      last: "zaman",
+    },
+    {
+      first: "Shaheen",
+      last: "Afridi",
+    },
+  ];
   return (
     <div className="App">
-      <TextField
-        text="Hi there"
-        isLoggedIn={false}
-        amount={33}
-        fn={() => addNumber(3)}
-        person={{ name: "arsan", age: 32 }}
-        handleChange={(e) => handleChange(e)}
-      />
+      {/* <Greet name="Muhammad Arsan" messageCount={10} isLoggedIn={false} />
+      <Person name={personInfo} />
+      <PersonList names={namesList} /> */}
+
+      <Status status="error" />
+      <Heading>Placeholder text</Heading>
+      <Oscar>
+        <Heading>dsfdfds dsfds dsf</Heading>
+      </Oscar>
     </div>
   );
 }

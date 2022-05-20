@@ -22,7 +22,7 @@ const TextField: React.FC<Props> = ({ amount, handleChange }) => {
     <div ref={divRef}>
       TextField
       <div>Amount :{amount}</div>
-      <input ref={inputRef} onChange={handleChange} />
+      {/* <input ref={inputRef} onChange={handleChange} /> */}
     </div>
   );
 };
